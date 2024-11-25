@@ -133,7 +133,7 @@ messy_data = df[['Revenue', 'Operating Income', 'Operating Margin', 'Revenue Gro
 clean_data = [[date for date in df['Date']]]
 
 for ea_list in messy_data:
-    rounded_list = [round(x, 2) for x in ea_list]
+    rounded_list = [int(x) for x in ea_list]
     clean_data.append(rounded_list)
 
 the_table = plt.table(cellText=clean_data[1:],
